@@ -1,0 +1,13 @@
+.list {
+  list-style-type: none;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.listItem {
+  border: 1px solid black;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+}

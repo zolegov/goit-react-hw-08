@@ -1,0 +1,9 @@
+.contactDeleteBtn {
+  margin-left: auto;
+}
+.personName,
+.personNumber {
+  text-align: left;
+  display: flex;
+  gap: 10px;
+}
