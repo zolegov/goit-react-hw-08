@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { login, logout, refreshUser, register } from "./operations";
+import { useSelector } from "react-redux";
+import { selectFilter } from "../filters/selectors";
 const pending = (state) => {
   state.isLoading = true;
   state.isError = null;
@@ -9,6 +11,7 @@ const rejected = (state) => {
   state.isLoading = false;
   state.isError = null;
 };
+
 export const authSlice = createSlice({
   name: "auth",
   initialState: {
@@ -21,6 +24,7 @@ export const authSlice = createSlice({
     isLoading: false,
     isRefreshing: false,
     isError: null,
+    filter: "",
   },
   extraReducers: (builder) =>
     builder
@@ -46,6 +50,7 @@ export const authSlice = createSlice({
         };
         state.token = null;
         state.isLoggedIn = false;
+        // state.filters.filter = "";
       })
       .addCase(logout.rejected, rejected)
       .addCase(refreshUser.pending, (state) => {

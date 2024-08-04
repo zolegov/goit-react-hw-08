@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Contact from "../Contact/Contact";
 import css from "../ContactList/ContactList.module.css";
 import { selectFilteredContacts } from "../../redux/contacts/selectors";
-import { deleteContact } from "../../redux/contacts/contactsOps";
+import { deleteContact, editContact } from "../../redux/contacts/contactsOps";
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -20,6 +20,7 @@ const ContactList = () => {
           <li key={contact.id} className={css.listItem}>
             <Contact
               data={contact}
+              onEdit={() => dispatch(editContact(contact.id))}
               onDelete={() => dispatch(deleteContact(contact.id))}
             />
           </li>

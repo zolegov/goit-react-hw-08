@@ -2,6 +2,7 @@ import { Field, Form, Formik } from "formik";
 import css from "./LoginForm.module.css";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/auth/operations";
+import { Button, TextField } from "@mui/material";
 
 export default function LoginForm() {
   const dispatch = useDispatch();
@@ -13,15 +14,28 @@ export default function LoginForm() {
     <Formik initialValues={{ email: "", password: "" }} onSubmit={handleSubmit}>
       <Form className={css.form}>
         <label className={css.label} htmlFor="email">
-          Email
-          <Field type="email" name="email" />
+          <Field
+            name="email"
+            type="email"
+            as={TextField}
+            id="outlined-number"
+            label="Email"
+            variant="outlined"
+          />
         </label>
         <label className={css.label} htmlFor="password">
-          Password
-          <Field type="password" name="password" />
+          <Field
+            name="password"
+            type="password"
+            as={TextField}
+            id="outlined-password"
+            label="Password"
+            variant="outlined"
+          />
         </label>
-        <button type="submit">Log In</button>
-        <p>zazubik78@gmail.com</p>
+        <Button type="submit" variant="contained">
+          Log In
+        </Button>
       </Form>
     </Formik>
   );

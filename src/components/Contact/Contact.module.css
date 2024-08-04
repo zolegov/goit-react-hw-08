@@ -7,3 +7,66 @@
   display: flex;
   gap: 10px;
 }
+.contact {
+  display: flex;
+}
+.btnGroup {
+  display: flex;
+}
+.contactData {
+  margin-right: auto;
+}
+/* .modal {
+  position: absolute;
+  inset: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 10px;
+  outline: none;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 600px;
+  height: 402px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Високий z-index для перекриття інших елементів */
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+  height: 402px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 999;
+}
+.modalBtn {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.contactBtnDelete {
+  margin-left: 20px !important;
+}
