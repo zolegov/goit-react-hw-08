@@ -1,10 +1,7 @@
 import "./App.css";
-import ContactList from "./components/ContactList/ContactList";
-import SearchBox from "./components/SearchBox/SearchBox";
-import ContactForm from "./components/ContactForm/ContactForm";
+
 import { Suspense, lazy, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContacts } from "./redux/contacts/contactsOps";
 import Layout from "./components/Layout/Layout";
 import { Route, Routes } from "react-router-dom";
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));

@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { login, logout, refreshUser, register } from "./operations";
-import { useSelector } from "react-redux";
-import { selectFilter } from "../filters/selectors";
+
 const pending = (state) => {
   state.isLoading = true;
   state.isError = null;
